@@ -80,7 +80,7 @@ Raphael.fn.g.piechart = function (cx, cy, r, values, opts) {
         }
         for (i = 0; i < len; i++) {
             p = paper.path(sectors[i].attr("path")).attr(this.g.shim);
-            opts.href && opts.href[i] && p.attr({href: opts.href[i]});
+            opts.href && opts.href[i] && p.attr({href: opts.href[values[i].order]});
             p.attr = function () {};
             covers.push(p);
             series.push(p);
